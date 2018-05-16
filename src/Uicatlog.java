@@ -27,7 +27,8 @@ public IOSDriver driver;
 public void setup() throws MalformedURLException
 
 	{
-		File app = new File("/Users/air/Desktop/UICatalog.app");
+		
+		File app = new File(System.getProperty("user.dir")+ "/lib/UICatalog.app");
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.2");
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7");
